@@ -20,7 +20,7 @@ def run(playwright: Playwright) -> None:
 
     page.get_by_placeholder("Password").click()
     page.get_by_placeholder("Password").fill("/Poiuytrewq123")
-    time.sleep(2)
+    page.wait_for_timeout(5000)
     page.get_by_role("button", name="Login").click(force=True)
 
 
